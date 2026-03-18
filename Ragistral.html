@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Registral.css">
+</head>
+<body>
+    <main class="page">
+        <section class="form-card" aria-labelledby="registration-title">
+            <header class="form-header">
+                <h1 id="registration-title">Professional Registration Form</h1>
+                <p>Complete all required fields to create your registration profile.</p>
+            </header>
+
+            <form class="registral-form" action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="grid two-col">
+                        <div class="field">
+                            <label for="first-name">First Name</label>
+                            <input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+                        </div>
+                        <div class="field">
+                            <label for="last-name">Last Name</label>
+                            <input id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Address</legend>
+                    <div class="grid two-col">
+                        <div class="field span-2">
+                            <label for="address-line1">Street Address</label>
+                            <input id="address-line1" name="addressLine1" type="text" autocomplete="address-line1" required>
+                        </div>
+                        <div class="field span-2">
+                            <label for="address-line2">Address Line 2</label>
+                            <input id="address-line2" name="addressLine2" type="text" autocomplete="address-line2">
+                        </div>
+                        <div class="field">
+                            <label for="city">City</label>
+                            <input id="city" name="city" type="text" autocomplete="address-level2" required>
+                        </div>
+                        <div class="field">
+                            <label for="state">State / Region</label>
+                            <input id="state" name="state" type="text" autocomplete="address-level1" required>
+                        </div>
+                        <div class="field">
+                            <label for="postal-code">Postal / ZIP Code</label>
+                            <input id="postal-code" name="postalCode" type="text" pattern="[0-9A-Za-z -]{4,10}" autocomplete="postal-code" required>
+                        </div>
+                        <div class="field">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" autocomplete="country-name" required>
+                                <option value="">Select country</option>
+                                <option value="usa">United States</option>
+                                <option value="canada">Canada</option>
+                                <option value="ethiopia">Ethiopia</option>
+                                <option value="kenya">Kenya</option>
+                                <option value="djibouti">Djibouti</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <div class="grid two-col">
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" name="phone" type="tel" pattern="^[0-9+() -]{7,20}$" autocomplete="tel" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="feature-row">
+                    <label class="checkbox-wrap" for="updates">
+                        <input id="updates" name="updates" type="checkbox">
+                        <span>Send me updates and announcements</span>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn secondary">Clear</button>
+                    <button type="submit" class="btn primary">Submit Registration</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
